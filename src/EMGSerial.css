@@ -1121,3 +1121,85 @@
     font-size: 0.9em;
   }
 }
+/* ✅ Small hidden demo buttons at bottom */
+.demo-hidden-panel {
+  margin: 35px auto 10px auto;
+  padding: 8px 12px;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0.35;
+  transition: all 0.3s ease;
+}
+
+.demo-hidden-panel:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.demo-hidden-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.demo-hidden-panel:hover .demo-hidden-title {
+  /* color: #2d3748; */
+}
+
+.demo-mini-btn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.demo-mini-btn:hover {
+  transform: translateY(-1px);
+}
+
+.demo-mini-btn.normal {
+  /* background: linear-gradient(135deg, #48bb78, #2f855a); */
+}
+
+.demo-mini-btn.paralysis {
+  /* background: linear-gradient(135deg, #fc8181, #e53e3e); */
+}
+
+.demo-mini-btn.stop {
+  /* background: linear-gradient(135deg, #4a5568, #1a202c); */
+}
+
+.demo-mini-btn.active {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .demo-hidden-panel {
+    max-width: 300px;
+    gap: 4px;
+    padding: 7px 8px;
+  }
+
+  .demo-mini-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .demo-hidden-title {
+    font-size: 10px;
+  }
+}
